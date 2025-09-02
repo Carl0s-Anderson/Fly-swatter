@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fly swatter</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="jogo.js"></script>
+    <link rel="shortcut icon" href="img/mosquito.png" type="image/x-icon">
+
+</head>
+
+<body onresize="ajustamanhopalcojogo()">
+    <div class="painel">
+        <div class="vidas">
+            <img src="img/coracao_vazio.png">
+            <img src="img/coracao_cheio.png">
+            <img src="img/coracao_cheio.png">
+
+        </div>
+        <div class="cronometro"> 
+            tempo restante:?</div>
+    </div>
+
+
+    <script>
+        setInterval(function () {
+            posicaoAleatoria()
+        }, 1000)
+    </script>
+</body>
+
+</html>
