@@ -20,14 +20,17 @@
 
         </div>
         <div class="cronometro">
-            tempo restante:?</div>
+            tempo restante: <span id="cronometro"></span> </div>
     </div>
 
 
     <script>
-        setInterval(function () {
+        ajustamanhopalcojogo() 
+        document.getElementById('cronometro').innerHTML = tempo
+
+        var criaMosquito = setInterval(function () {
             posicaoAleatoria()
-        }, 1500)
+        },  criaMosquitoTempo)
     </script>
 </body>
 

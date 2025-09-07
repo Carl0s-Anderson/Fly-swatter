@@ -1,28 +1,44 @@
+/* No topo do estilo.css */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    font-family: 'Press Start 2P', cursive; /* Exemplo de fonte pixelada para jogos */
+    /* ...outros estilos do body */
+}
+html{
+    cursor: url('img/mata_mosca.png') 30 30, auto;
+}
+
+/* Em estilo.css */
 body {
     background-image: url(img/bg.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    overflow: hidden; 
 }
 
 .mosquito1 {
-    width: 50px;
-    height: 50px;
+    width: 5vw;
+    height: 5vw;
 }
 
 .mosquito2 {
-    width: 70px;
-    height: 70px;
+    width: 7vw;
+    height: 7vw;
 }
 
 .mosquito3 {
-    width: 100px;
-    height: 100px;
+    width: 10vw;
+    height: 10vw;
 }
 
 .mosquito4 {
-    width: 250px;
-    height: 250px;
+    width: 15vw;
+    height: 15vw;
 }
+
 
 .ladoA {
     transform: scaleX(1);
@@ -43,8 +59,19 @@ body {
     background-color: #fff;
     opacity: 0.7;
 }
-.vidas{
+
+.vidas {
     float: left;
     font-size: 20px;
     font-weight: bold;
+}
+
+.btn {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
