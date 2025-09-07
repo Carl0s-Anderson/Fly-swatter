@@ -1,3 +1,4 @@
+
 var altura = 0
 var largura = 0
 var vidas = 1
@@ -6,13 +7,23 @@ var criaMosquitoTempo = 1500
 
 var nivel = window.location.search
  nivel = nivel.replace('?','')
+ nivel = decodeURIComponent(nivel) 
  if(nivel === 'Normal'){
  criaMosquitoTempo = 1500
  } else if(nivel === 'Dificil'){
  criaMosquitoTempo = 1000
  }else if(nivel === 'Muito Dificil'){
- criaMosquitoTempo = 750
+ criaMosquitoTempo = 890
  }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const musicaFundo = document.getElementById('musicaFundo');
+    if (musicaFundo) {
+        musicaFundo.play().catch(error => {
+            console.log("A reprodução automática foi bloqueada pelo navegador.");
+        });
+    }
+});
 function ajustamanhopalcojogo() {
 
     altura = window.innerHeight
@@ -63,6 +74,15 @@ function posicaoAleatoria() {
     mosquito.onclick = function () {
         this.remove()
     }
+       mosquito.onclick = function () {
+        const somRaquetada = document.getElementById('somRaquetada');
+        if (somRaquetada) {
+            somRaquetada.currentTime = 0; // Reinicia o áudio
+            somRaquetada.play();          // Toca o som da raquetada
+        }
+        this.remove(); // Remove o mosquito
+    }
+
 
     document.body.appendChild(mosquito)
 

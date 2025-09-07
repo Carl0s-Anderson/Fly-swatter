@@ -25,13 +25,15 @@
 
 
     <script>
-        ajustamanhopalcojogo() 
+        ajustamanhopalcojogo()
         document.getElementById('cronometro').innerHTML = tempo
 
         var criaMosquito = setInterval(function () {
             posicaoAleatoria()
-        },  criaMosquitoTempo)
+        }, criaMosquitoTempo)
     </script>
+    <audio id="musicaFundo" src="audio/fundo.mp3" loop preload="auto"></audio>
+    <audio id="somRaquetada" src="audio/raquetada.mp3" preload="auto"></audio>
 </body>
 
 </html>
